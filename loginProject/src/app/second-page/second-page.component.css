@@ -1,0 +1,41 @@
+.example-viewport {
+    height: 580px;
+    width: 600px;
+    border: 1px solid black;
+   /* text-align: center; */
+     }
+     .example-item {
+      height: 75px;
+    }
+.scrollbox {
+  text-align: justify;
+  width: 590px;
+  margin-left: 400px;
+  background-color: white; 
+ }
+ 
+ .style{
+   background-color:  rgb(226, 220, 220);
+   /* height: 350px;*/
+   }
+ .scroll{
+  height: 580px;
+  width: 600px;  border: 1px solid black;
+ }
+  
+.header{
+  background-color: rgb(245, 141, 141);
+  height: 35px;
+}
+.head{
+  margin-left: 1100px;
+  
+}
+.search{
+   height: 35px;
+  text-shadow: yellow;
+  background-color:  rgb(245, 141, 141);
+  }
+.searchbutton{
+  margin-left: 570px;
+}

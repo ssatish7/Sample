@@ -1,0 +1,27 @@
+<body class="class1">
+  <p> Login </p>
+  <form class="class2">
+    <br><br>
+    <div>
+      
+      <mat-label>
+        <b>E-mail</b> &nbsp;&nbsp;&nbsp;&nbsp;:
+      </mat-label>
+      <mat-form-field appearance="fill">
+        
+      <input type="email" [formControl]="email" required>
+    
+      <mat-error *ngIf="email.invalid"><b>{{getErrorMessage()}}</b></mat-error>
+    </mat-form-field>
+    </div>
+    <div>
+      <label for="password">
+        <b>Password</b> :
+      </label>
+      <input type="password" [formControl]="password1" required>
+    </div><br>
+
+    <button mat-raised-button color="primary" type="submit" (click)="toNextpage()"> <b>Login</b> </button>
+
+  </form>
+</body>

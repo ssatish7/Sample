@@ -1,0 +1,56 @@
+<body class="style">
+
+  <div class="header">
+    <button class="head" mat-raised-button color="primary" routerLink="/login">Log-out</button>
+  </div>
+
+  <div class="search">
+    <div class="searchbutton"><b>Search:-</b>
+      <input matInput type="text" name="search" [(ngModel)]="searchText">
+    </div>
+  </div>
+<div class="scrollbox">
+  
+    <cdk-virtual-scroll-viewport [itemSize]="50" class="example-viewport">
+      <div *cdkVirtualFor="let i of jokes | filter:searchText " class="example-item">
+        <!-- <div  class="example-viewport"> -->
+         <!-- <div *ngFor="let i of jokes | filter:searchText " >   -->
+        <h3>
+          
+          <b>{{i.setup}}</b> <br>
+
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button (click)="getState()" mat-raised-button color="warn"> Response </button>
+
+          <span *ngIf="!temp">
+            {{i.punchline}}
+            
+          </span>
+          
+        </h3>
+      <!-- </div></div> -->
+      </div> 
+      <div  infiniteScroll [infiniteScrollDistance]="50" [infiniteScrollThrottle]="200"
+    (scrolled)="onScroll()" [scrollWindow]="true">
+  </div>
+    </cdk-virtual-scroll-viewport> 
+    
+   
+
+    <!-- <div>
+      <ngx-spinner bdOpacity=0.9 bdColor="" size="default" color="#581f87" type="ball-pulse-sync" [fullScreen]="false" 
+      (scrolled)="onScroll()">
+      </ngx-spinner>
+    </div> -->
+  <!-- </div> -->
+</div>
+
+
+
+  <!-- <mat-paginator [length]="50"
+              [pageSize]="10"
+              >
+</mat-paginator> -->
+
+  
+</body>
